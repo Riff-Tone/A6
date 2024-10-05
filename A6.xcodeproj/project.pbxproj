@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8671C9432CB0EAA900376224 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8671C9422CB0EAA900376224 /* main.c */; };
 		8671C94E2CB0ED2C00376224 /* library.c in Sources */ = {isa = PBXBuildFile; fileRef = 8671C94D2CB0ED2C00376224 /* library.c */; };
+		8671C9542CB1065800376224 /* slist.c in Sources */ = {isa = PBXBuildFile; fileRef = 8671C9532CB1065800376224 /* slist.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		8671C94C2CB0ED2C00376224 /* library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = library.h; sourceTree = SOURCE_ROOT; };
 		8671C94D2CB0ED2C00376224 /* library.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = library.c; sourceTree = SOURCE_ROOT; };
 		8671C94F2CB0F46900376224 /* notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = notes.rtf; sourceTree = SOURCE_ROOT; };
+		8671C9522CB1065800376224 /* slist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = slist.h; sourceTree = "<group>"; };
+		8671C9532CB1065800376224 /* slist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = slist.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 		8671C9412CB0EAA900376224 /* A6 */ = {
 			isa = PBXGroup;
 			children = (
+				8671C9522CB1065800376224 /* slist.h */,
+				8671C9532CB1065800376224 /* slist.c */,
 				8671C94F2CB0F46900376224 /* notes.rtf */,
 				8671C94C2CB0ED2C00376224 /* library.h */,
 				8671C94D2CB0ED2C00376224 /* library.c */,
@@ -126,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8671C9542CB1065800376224 /* slist.c in Sources */,
 				8671C9432CB0EAA900376224 /* main.c in Sources */,
 				8671C94E2CB0ED2C00376224 /* library.c in Sources */,
 			);
