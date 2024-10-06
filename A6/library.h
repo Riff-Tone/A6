@@ -10,8 +10,9 @@
 
 #include <stdio.h>
 
-void readFile(int size);
+void readFile(void);
 void writeFile(void);
 void clearInputBuffer(void);
 char toQuit(void);
+
 #endif /* library_h */

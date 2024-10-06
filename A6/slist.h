@@ -9,9 +9,24 @@
 #define slist_h
 
 #include <stdio.h>
-void insertHead(SList* list, char* data);
-char* removeHead(SList* list);
-void insertTail(SList* list, char* data);
-char* removeTail(SList* list);
 
+typedef struct Node {
+	 char data[20];
+	 struct Node* next;
+} Node;
+
+typedef struct Deque{
+	Node *head;
+	Node *tail;
+}Deque;
+
+typedef struct SList{
+	Node* head;
+}SList;
+
+void push_back(Node *User);
+void push_front(Node *User);
+char* pop_back(void);
+char* pop_front(void);
+void insert(char data[]);
 #endif /* slist_h */

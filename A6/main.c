@@ -6,34 +6,44 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "library.h"
-typedef struct Node{
-	int name;
-	struct Node *next;
-}Node;
+#include "slist.h"
 
-typedef struct Deque{
-	
-}Deque;
 
-void push_back(Deque* q, char* data){
-	
+char* selector(char *input){
+	switch (*input) {
+		case 'f':
+			return pop_front();
+		case 'b':
+			return pop_back();
+		default:
+			printf("Invalid input, please choose the appropritate input \n");
+			break;
+	}
+	return "";
 }
-
-void push_front(Deque* q, char* data){
+void insertPlayers(void){
 	
-}
-char* pop_back(Deque* q){
-	char *fix = 'c';
-	
-	return fix;
-}
-char* pop_front(Deque* q){
-	
+	insert("Diego");
+	insert("Juan");
+	insert("Jesus");
+	insert("Angel");
 }
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	printf("Hello, World!\n");
+	
+	char quit = toQuit();
+//	readFile();
+	insertPlayers();
+	
+	while(quit != 'q'){
+		
+		printf("%s\n", selector(&quit));
+		quit = toQuit();
+	}
+	printf("Thanks for playing! \n");
+	
 	return 0;
 }
