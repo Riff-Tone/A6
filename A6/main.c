@@ -24,19 +24,12 @@ char* selector(char *input){
 	}
 	return "";
 }
-void insertPlayers(void){
-	
-	insert("Diego");
-	insert("Juan");
-	insert("Jesus");
-	insert("Angel");
-}
+
 
 int main(int argc, const char * argv[]) {
 	
 	char quit = toQuit();
-//	readFile();
-	insertPlayers();
+	readFile();
 	
 	while(quit != 'q'){
 		

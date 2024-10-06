@@ -12,32 +12,21 @@
 #include <string.h>
 
 void readFile(void) {
+	 const char *FILENAME = "NameList.txt";
+	 FILE* fp = fopen(FILENAME, "r");
 
-	const char *FILENAME = "NodeNames.txt";
-	
-	FILE* fp = fopen(FILENAME, "r");
-	
-	int size = 20;
-	 if (fp != NULL) {  // If the file exists, read the content
-		 printf("file exist");
-		  char Name[size];
-		  int result;
+	 if (fp != NULL) {  // If the file exists
+		  char Name[20];
 
-		 while ((result = fscanf(fp, "%s", Name)) != EOF) {
-			  printf("Read name: %s\n", Name);
-		 }
+		  while (fgets(Name, sizeof(Name), fp) != NULL) {
+			  Name[strcspn(Name, "\n")] = '\0';
+			  insert(Name);
+		  }
 
 		  fclose(fp);
-	 } else {  // If the file doesn't exist, try to create it
-		  printf("File does not exist, attempting to create: %s\n", FILENAME);
+	 } else {  // If the file doesn't exist, create it
 		  fp = fopen(FILENAME, "w");
-
-		  if (fp != NULL) {  // Check if the file was successfully created
-				printf("File %s created successfully.\n", FILENAME);
-				fclose(fp);
-		  } else {
-				printf("Error: Unable to create file %s. Please check permissions or directory.\n", FILENAME);
-		  }
+		  fclose(fp);
 	 }
 }
 
